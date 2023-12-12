@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use PDF;
 use App\Models\Puskesmas;
 
 use Illuminate\Http\Request;

@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Pengaturan Akun</li>
+    <li class="alert bg-primary text-center">Pengaturan Akun</li>
 @endsection
 
 @section('content')

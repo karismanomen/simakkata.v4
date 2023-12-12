@@ -275,11 +275,11 @@ table.dataTable {
 }
 table.dataTable thead th,
 table.dataTable tfoot th {
-    background-color: #3c8dbc;
+    background-color: lightskyblue;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 table.dataTable thead th,
 table.dataTable thead td {
@@ -299,9 +299,9 @@ table.dataTable tfoot td {
 table.dataTable tbody tr {
     text-align: left;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 600;
     font-style: oblique;
-    background-color: rgb(166, 210, 226);
+    background-color: lightsteelblue;
 }
 table.dataTable tbody tr.selected > * {
     box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.9);
@@ -315,7 +315,7 @@ table.dataTable tbody tr.selected a {
 }
 table.dataTable tbody th,
 table.dataTable tbody td {
-    padding: 7px 9px;
+    padding: 6px 8px;
 }
 table.dataTable.row-border tbody th,
 table.dataTable.row-border tbody td,
@@ -461,7 +461,7 @@ table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
     box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected, 0.962));
 }
 table.dataTable.no-footer {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 0px solid lightskyblue;
 }
 table.dataTable.compact thead th,
 table.dataTable.compact thead td,
@@ -469,7 +469,7 @@ table.dataTable.compact tfoot th,
 table.dataTable.compact tfoot td,
 table.dataTable.compact tbody th,
 table.dataTable.compact tbody td {
-    padding: 2px;
+    padding: 1px;
 }
 table.dataTable th,
 table.dataTable td {

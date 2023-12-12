@@ -59,26 +59,13 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="kode_fasyankes" class="col-lg-2 col-lg-offset-1 control-label">Kode Fasyankes</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="kode_fasyankes" id="kode_fasyankes" class="form-control" required>
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="alamat" class="col-lg-2 col-lg-offset-1 control-label">Alamat</label>
                         <div class="col-lg-6">
                             <input type="text" name="alamat" id="alamat" class="form-control">
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>     
-                    <div class="form-group row">
-                        <label for="email" class="col-lg-2 col-lg-offset-1 control-label">Email</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="email" id="email" class="form-control">
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>             	
+        	    
                 <div>                  
                   <div class="form-group row">
                     <label for="nilai_akre" class="col-lg-2 col-lg-offset-1 control-label">Nilai Akreditasi</label>
@@ -109,43 +96,24 @@
                         </div>
                     </div>  
                   </div>
-                  <div class="form-group row">
-                    <label for="kawasan" class="col-lg-2 col-lg-offset-1 control-label">Kawasan</label>
-                    <div class="col-lg-6">
-                        <Select class="form-control" name="kawasan" id="kawasan">
-                            <option value="Dasar">Perdesaan</option>
-                            <option value="Madya">Perkotaan</option>
-                            <option value="Utama">Terpencil</option>
-                            <option value="Paripurna">-----</option>
-                        </Select>
-                    </div>
-                 </div>
-                  <div class="form-group row">
-                    <label for="inap" class="col-lg-2 col-lg-offset-1 control-label">Rawat/Non Rawat Inap</label>
-                    <div class="col-lg-6">
-                        <Select class="form-control" name="inap" id="inap">
-                            <option value="Rawat Inap">Rawat Inap</option>
-                            <option value="Non Rawat Inap">Non Rawat Inap</option>
-                        </Select>
-                    </div>
-                 </div>
-                  <div class="form-group row">
-                    <label for="poned" class="col-lg-2 col-lg-offset-1 control-label">PONED/Non PONED</label>
-                    <div class="col-lg-6">
-                        <Select class="form-control" name="poned" id="poned">
-                            <option value="PONED">PONED</option>
-                            <option value="Non PONED">Non PONED</option>
-                        </Select>
-                    </div>
+                  <div> 
+                    <div class="form-group row">
+                        <label for="kapus" class="col-lg-2 col-lg-offset-1 control-label">Kepala Puskesmas</label>
+                        <div class="col-lg-6">
+                            <input type="text" name="kapus" id="kapus" class="form-control">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>  
                   </div>
-                  <div class="form-group row">
-                    <label for="blud" class="col-lg-2 col-lg-offset-1 control-label">BLUD/Non BLUD</label>
-                    <div class="col-lg-6">
-                        <Select class="form-control" name="blud" id="blud">
-                            <option value="BLUD">BLUD</option>
-                            <option value="Non BLUD">Non BLUD</option>
-                        </Select>
-                    </div>
+                  <div> 
+                    <div class="form-group row">
+                        <label for="pjmutu" class="col-lg-2 col-lg-offset-1 control-label">Pj Mutu</label>
+                        <div class="col-lg-6">
+                            <input type="text" name="pjmutu" id="pjmutu" class="form-control">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>  
+                  </div>
                  </div>
                 <div class="modal-footer">
                     <button class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Simpan</button>

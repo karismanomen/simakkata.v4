@@ -1,79 +1,67 @@
 @extends('layouts.master')
 
 @section('title')
-    Daftar Klinik
+    Daftar Dokumen
 @endsection
 
 @section('breadcrumb')
     @parent
-    <li class="alert bg-primary text-center">Daftar Klinik</li>
+    <li class="alert bg-primary text-center">Dokumen Akreditasi</li>
 @endsection
 
 @section('content')
-	<div class="row">
+    <div class="row">
         <div class="col-lg-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <button onclick="addForm('{{ route('klinik.store') }}')" class="btn btn-success btn-xs btn-flat"><i
-                            class="fa fa-plus-circle"></i> Tambah Klinik</button>
+                    <button onclick="addForm('{{ route('dokumen.store') }}')" class="btn btn-success btn-xs btn-flat"><i
+                            class="fa fa-plus-circle"></i> Tambah Dokumen</button>
                 </div>
-            </div>
-      <div class="row"> 
-            <div class="box-body table-responsive">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <th>No</th>
-                        <th>Klinik</th>
-                        <th>Alamat</th>
-                        <th>Hasil Akre</th>
-                        <th>Tahun Akre</th>
-						<th>No Izin Klinik</th>
-						<th>PJ Mutu</th>
-                        <th><i class="fa fa-cog"></i></th>
-                    </thead>
-                </table>
+                <div class="box-body table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <th width="1%">No</th>
+                            <th>Dokumen Akreditasi</th>
+                            <th width="6%"><i class="fa fa-cog"></i></th>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-   
-    @includeIf('klinik.form')
+
+    @includeIf('dokumen.form')
 @endsection
 
 @push('scripts')
     <script>
         let table;
-      
+
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {
-                    url: '{{ route('klinik.data') }}',
+                    url: '{{ route('dokumen.data') }}',
                 },
                 columns: [{
                         data: 'DT_RowIndex',
-                  		width: '1%',
-                        class: 'text-center',
                         searchable: false,
-                        sortable: false
+                        sortable: false,
+                        class: 'text-center'
                     },
-                    {data: 'nama_klinik', name: 'nama_klinik' , width: '20%', class: 'text-left' },
-                    {data: 'alamat', name: 'alamat' , width: '30%', class: 'text-justify' },
-                    {data: 'nilai_akre', name: 'nilai_akre' , width: '5%', class: 'text-center' },
-                    {data: 'tahun_akre', name: 'tahun_akre' , width: '5%', class: 'text-center' },
-                    {data: 'noizin', name: 'noizin' , width: '15%', class: 'text-center' },
-                    {data: 'pjmutu_klinik', name: 'pjmutu_klinik' , width: '15%', class: 'text-left' },
+                    {
+                        data: 'nama_dokumen', class: 'text-left'
+                    },
                     {
                         data: 'aksi',
-                        width: '10%',
                         class: 'text-center',
                         searchable: false,
                         sortable: false
                     },
                 ]
             });
-          
+
             $('#modal-form').validator().on('submit', function(e) {
                 if (!e.preventDefault()) {
                     $.post($('#modal-form form').attr('action'), $('#modal-form form').serialize())
@@ -91,31 +79,26 @@
 
         function addForm(url) {
             $('#modal-form').modal('show');
-            $('#modal-form .modal-title').text('Tambah Klinik');
+            $('#modal-form .modal-title').text('Tambah Dokumen');
 
             $('#modal-form form')[0].reset();
             $('#modal-form form').attr('action', url);
             $('#modal-form [name=_method]').val('post');
-            $('#modal-form [name=nama_klinik]').focus();
+            $('#modal-form [name=nama_dokumen]').focus();
         }
 
         function editForm(url) {
             $('#modal-form').modal('show');
-            $('#modal-form .modal-title').text('Edit Klinik');
+            $('#modal-form .modal-title').text('Edit Dokumen');
 
             $('#modal-form form')[0].reset();
             $('#modal-form form').attr('action', url);
             $('#modal-form [name=_method]').val('put');
-            $('#modal-form [name=nama_klinik]').focus();
+            $('#modal-form [name=nama_dokumen]').focus();
 
             $.get(url)
                 .done((response) => {
-                    $('#modal-form [name=nama_klinik]').val(response.nama_klinik);
-                    $('#modal-form [name=alamat]').val(response.alamat);
-                    $('#modal-form [name=nilai_akre]').val(response.nilai_akre);              
-                    $('#modal-form [name=tahun_akre]').val(response.tahun_akre);
-                    $('#modal-form [name=noizin]').val(response.noizin);
-                    $('#modal-form [name=pjmutu_klinik]').val(response.pjmutu_klinik);
+                    $('#modal-form [name=nama_dokumen]').val(response.nama_dokumen);
                 })
                 .fail((errors) => {
                     alert('Tidak dapat menampilkan data');

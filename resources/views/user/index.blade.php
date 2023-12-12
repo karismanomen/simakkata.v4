@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar Pengguna</li>
+    <li class="alert bg-primary text-center">Daftar Pengguna</li>
 @endsection
 
 @section('content')

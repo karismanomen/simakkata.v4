@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar Klinik</li>
+    <li class="alert bg-primary text-center">Daftar Klinik</li>
 @endsection
 
 @section('content')
@@ -17,12 +17,11 @@
                     <thead>
                         <th>No</th>
                         <th>Klinik</th>
-                        <th>Kode Klinik</th>
-                        <th>Alamat</th>                        
-                        <th>Dokter PJ</th>
+                        <th>Alamat</th>
                         <th>Hasil Akre</th>
                         <th>Tahun Akre</th>
 						<th>No Izin Klinik</th>
+						<th>PJ Mutu</th>
                     </thead>
                 </table>
             </div>
@@ -50,12 +49,11 @@
                         sortable: false
                     },
                     {data: 'nama_klinik', name: 'nama_klinik' , width: '20%', class: 'text-left' },
-                    {data: 'kode_klinik', name: 'kode_klinik' , width: '10%', class: 'text-center' },
                     {data: 'alamat', name: 'alamat' , width: '30%', class: 'text-justify' },
-                    {data: 'dokter', name: 'dokter' , width: '15%', class: 'text-center' },
                     {data: 'nilai_akre', name: 'nilai_akre' , width: '8%', class: 'text-center' },
                     {data: 'tahun_akre', name: 'tahun_akre' , width: '8%', class: 'text-center' },
                     {data: 'noizin', name: 'noizin' , width: '15%', class: 'text-center' },
+                    {data: 'pjmutu_klinik', name: 'pjmutu_klinik' , width: '15%', class: 'text-left' },
                 ]
             });
         });

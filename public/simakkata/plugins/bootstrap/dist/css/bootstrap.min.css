@@ -1744,11 +1744,9 @@ a.text-danger:hover {
 
 .bg-primary-light {
     background-color: lightskyblue;
-    min-height: 40px;   
-    border-radius: 25%;
+    min-height: 40px
     vertical-align: middle;
     padding: 15px;
-    animation: marquee 5s linear infinite;
 }
 
 a.bg-primary:focus,

@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Edit Profil</li>
+    <li class="alert bg-primary text-center">Edit Profil</li>
 @endsection
 
 @section('content')

@@ -19,13 +19,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="kode_klinik" class="col-lg-2 col-lg-offset-1 control-label">Kode Klinik</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="kode_klinik" id="kode_klinik" class="form-control" required>
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="alamat" class="col-lg-2 col-lg-offset-1 control-label">Alamat</label>
                         <div class="col-lg-6">
                             <input type="text" name="alamat" id="alamat" class="form-control">
@@ -65,6 +58,15 @@
                         <label for="noizin" class="col-lg-2 col-lg-offset-1 control-label">No. Izin Klinik</label>
                         <div class="col-lg-6">
                             <input type="text" name="noizin" id="noizin" class="form-control">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>  
+                  </div>
+                  <div> 
+                    <div class="form-group row">
+                        <label for="pjmutu_klinik" class="col-lg-2 col-lg-offset-1 control-label">PJ Mutu</label>
+                        <div class="col-lg-6">
+                            <input type="text" name="pjmutu_klinik" id="pjmutu_klinik" class="form-control">
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>  

@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Kategori Akreditasi</li>
+    <li class="alert bg-primary text-center">Kategori Akreditasi</li>
 @endsection
 
 @section('content')

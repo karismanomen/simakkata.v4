@@ -26,59 +26,30 @@
             </li>
 
             @if (auth()->user()->level == 1)
-                <li class="header">DATA MASTER</li>
+                <li class="header">MASTER DATA</li>
                 <li>
-                    <a href="{{ route('kategori.index') }}">
-                        <i class="fa fa-cube"></i> <span>Kategori</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('pendamping.index') }}">
-                        <i class="fa fa-users"></i> <span>Pendamping</span>
-                    </a>
-                </li>
-                <li class="header">DATA TPCB</li>
-              	<li>
                     <a href="{{ route('tpcb.index') }}">
-                        <i class="fa fa-users"></i> <span>Tim TPCB</span>
+                        <i class="fa fa-users"></i> <span>Data TPCB</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('tpcbfungsi.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Tugas/Fungsi TPCB</span>
+                <a href="{{ route('pendamping.index') }}">
+                        <i class="fa fa-users"></i> <span>Data Pendamping Akreditasi</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('tpcbcluster.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Cluster Binaan</span>
-                    </a>
-                </li>
-          
-                <li class="header">DATA PUSKESMAS</li>
                 <li>
                     <a href="{{ route('puskesmas.index') }}">
-                        <i class="fa fa-home"></i> <span>Puskesmas</span>
+                        <i class="fa fa-home"></i> <span>Data Puskesmas</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('pjmutupkm.index') }}">
-                        <i class="fa fa-id-card"></i> <span>Pj Mutu Puskesmas</span>
-                    </a>
-                </li>
-                <li class="header">DATA KLINIK</li>
                 <li>
                     <a href="{{ route('klinik.index') }}">
-                        <i class="fa fa-home"></i> <span>Klinik</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('pjmutuklinik.index') }}">
-                        <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
+                        <i class="fa fa-home"></i> <span>Data Klinik</span>
                     </a>
                 </li>
                 <li class="header">DOKUMEN</li>
                 <li>
-                    <a href="/vfm/">
+                    <a href="{{ route('upload.index') }}">
                         <i class="fa fa-home"></i> <span>Dokumen</span>
                     </a>
                 </li>
@@ -96,48 +67,31 @@
                 </li>
             @else
                 <li class="header">DATA MASTER</li>
-          		<li>
-                    <a href="{{ route('pendamping2.index') }}">
-                        <i class="fa fa-users"></i> <span>Pendamping</span>
-                    </a>
-                </li>
-                <li class="header">DATA TPCB</li>
                 <li>
                     <a href="{{ route('tpcb2.index') }}">
-                        <i class="fa fa-users"></i> <span> Tim TPCB</span>
+                        <i class="fa fa-users"></i> <span>Data TPCB</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('tpcb2fungsi.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Tugas/Fungsi TPCB</span>
+                <a href="{{ route('pendamping2.index') }}">
+                        <i class="fa fa-users"></i> <span>Data Pendamping Akreditasi</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('tpcb2cluster.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Cluster Binaan</span>
+                    <a href="{{ route('puskesmas2.index') }}">
+                        <i class="fa fa-home"></i> <span>Data Puskesmas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('klinik2.index') }}">
+                        <i class="fa fa-home"></i> <span>Data Klinik</span>
                     </a>
                 </li>
 
-                <li class="header">DATA PUSKESMAS</li>
+                          <li class="header">DOKUMEN</li>
                 <li>
-                    <a href="{{ route('puskesmas2.index') }}">
-                        <i class="fa fa-home"></i> <span>Puskesmas</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('pjmutupkm2.index') }}">
-                        <i class="fa fa-id-card"></i> <span>Pj Mutu Puskesmas</span>
-                    </a>
-                </li>
-                <li class="header">DATA KLINIK</li>
-                <li>
-                    <a href="{{ route('klinik2.index') }}">
-                        <i class="fa fa-home"></i> <span>Klinik</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('pjmutuklinik2.index') }}">
-                        <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
+                <a href="{{ route('dokumen.index') }}">
+                        <i class="fa fa-home"></i> <span>Dokumen</span>
                     </a>
                 </li>
             @endif

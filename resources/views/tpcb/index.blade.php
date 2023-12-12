@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar TPCB</li>
+    <li class="alert bg-primary text-center">Daftar TPCB</li>
 @endsection
 
 @section('content')
@@ -36,9 +36,7 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                                 <th>Jabatan Akreditasi</th>
                                 <th>Cluster</th>
                                 <th>Pangkat/Golongan</th>
-                                <th>Telepon</th>
-                                <th>Email</th>
-                                <th width="8%"><i class="fa fa-cog"></i></th>
+                                <th width="5%"><i class="fa fa-cog"></i></th>
                             </thead>
                         </table>
                     </form>
@@ -78,9 +76,7 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                     {data: 'nip', name: 'nip' , width: '11%', class: 'text-center' },
                     {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-center' },
                     {data: 'cluster', name: 'cluster' , width: '5%', class: 'text-center' },
-                    {data: 'pangkat', name: 'pangkat' , width: '5%', class: 'text-center' },
-                    {data: 'telepon', name: 'telepon' , width: '7%', class: 'text-center' },
-                    {data: 'email', name: 'email' , width: '10%', class: 'text-center' },
+                    {data: 'pangkat', name: 'pangkat' , width: '5%', class: 'text-left' },
                     {
                         data: 'aksi',
                         class: 'text-center',
@@ -136,8 +132,6 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                     $('#modal-form [name=jabatan_akre]').val(response.jabatan_akre);
                     $('#modal-form [name=cluster]').val(response.cluster);
                     $('#modal-form [name=pangkat]').val(response.pangkat);
-                    $('#modal-form [name=telepon]').val(response.telepon);
-                    $('#modal-form [name=email]').val(response.email);
                 })
                 .fail((errors) => {
                     alert('Tidak dapat menampilkan data');

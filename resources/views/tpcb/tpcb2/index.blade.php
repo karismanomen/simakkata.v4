@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar TPCB</li>
+    <li class="alert bg-primary text-center">Daftar TPCB</li>
 @endsection
 
 @section('content')
@@ -25,8 +25,6 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                                 <th>Jabatan Akreditasi</th>
                                 <th>Cluster</th>
                                 <th>Pangkat/Golongan</th>
-                                <th>Telepon</th>
-                                <th>Email</th>
                             </thead>
                         </table>
                     </form>
@@ -60,8 +58,6 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                     {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-center' },
                     {data: 'cluster', name: 'cluster' , width: '5%', class: 'text-center' },
                     {data: 'pangkat', name: 'pangkat' , width: '5%', class: 'text-center' },
-                    {data: 'telepon', name: 'telepon' , width: '7%', class: 'text-center' },
-                    {data: 'email', name: 'email' , width: '10%', class: 'text-left' },
                 ]
             });
 

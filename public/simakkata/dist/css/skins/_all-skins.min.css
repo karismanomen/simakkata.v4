@@ -196,9 +196,9 @@
     background-color: white;
 }
 .skin-blue-light .main-sidebar {
-    border-right: 2px solid skyblue;
-    border-bottom: 5px solid skyblue;
-    border-left: 5px solid skyblue;
+    border-right: 0px solid skyblue;
+    border-bottom: 0px solid skyblue;
+    border-left: 0px solid skyblue;
 }
 .skin-blue-light .user-panel > .info,
 .skin-blue-light .user-panel > .info > a {
@@ -212,7 +212,6 @@
 .skin-blue-light .sidebar-menu > li.header {
     color: #000000;
     background: skyblue;
-    border-radius: 30%;
     padding-left: 20%;
 }
 .skin-blue-light .sidebar-menu > li > a {

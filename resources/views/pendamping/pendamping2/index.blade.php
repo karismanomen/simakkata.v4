@@ -6,7 +6,7 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar Pendamping</li>
+    <li class="alert bg-primary text-center">Daftar Pendamping</li>
 @endsection
 
 @section('content')

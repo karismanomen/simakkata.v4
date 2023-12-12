@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use PDF;
 use App\Models\Tpcb;
 use App\Models\Kategori;
 
@@ -27,7 +26,7 @@ class TpcbController extends Controller
     {
         $tpcb = Tpcb::leftJoin('kategori', 'kategori.id_kategori', 'tpcb.id_kategori')
             ->select('tpcb.*', 'nama_kategori')
-            ->orderBy('nama_tpcb', 'asc')
+            ->orderBy('cluster', 'asc')
             ->get();
 
         return datatables()
@@ -52,12 +51,6 @@ class TpcbController extends Controller
             })
             ->addColumn('pangkat', function ($tpcb) {
                 return ($tpcb->pangkat);
-            })
-            ->addColumn('telepon', function ($tpcb) {
-                return ($tpcb->telepon);
-            })
-            ->addColumn('email', function ($tpcb) {
-                return ($tpcb->email);
             })
             ->addColumn('aksi', function ($tpcb) {
                 return '

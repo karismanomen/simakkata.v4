@@ -6,13 +6,11 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar Puskesmas</li>
+    <li class="alert bg-primary text-center">Daftar Puskesmas</li>
 @endsection
 
 @section('content')
-Kriteria Kawasan Berdasarkan SK
-		Keputusan Bupati Tasikmalaya Nomor : 440.7/Kep.317-Diskes/2016 Tentang Penetapan Kategori dan Wilayah Binaan Pusat Kesehatan Masyarakat Berdasarkan Karakteristik Wilayah Kerja Bupati Tasikmalaya.
-	<div class="row">
+<div class="row">
         <div class="col-lg-12">
             <div class="box">
                 <div class="box-header with-border">
@@ -26,16 +24,12 @@ Kriteria Kawasan Berdasarkan SK
                     <thead>
                         <th>No</th>
                         <th>Puskesmas</th>
-                        <th>Kode Faskes</th>
                         <th>Alamat</th>
-                        <th>Email</th>
                         <th>Hasil Akre</th>
                         <th>Tahun Akre</th>
 						<th>No Izin Puskesmas</th>
-                        <th>Kriteria Kawasan</th>
-                        <th>Non / Rawat Inap</th>
-                      	<th>Non / Poned</th>
-                        <th>Non / BLUD</th>
+						<th>Kepala Puskesmas</th>
+						<th>PJ Mutu</th>
                         <th><i class="fa fa-cog"></i></th>                     
                     </thead>
                 </table>
@@ -65,20 +59,16 @@ Kriteria Kawasan Berdasarkan SK
                         searchable: false,
                         sortable: false
                     },
-                    {data: 'nama', name: 'nama' , width: '8%', class: 'text-left' },
-                    {data: 'kode_fasyankes', name: 'kode_fasyankes' , width: '3%', class: 'text-center' },
-                    {data: 'alamat', name: 'alamat' , width: '40%', class: 'text-justify' },
-                    {data: 'email', name: 'email' , width: '15%', class: 'text-justify' },
+                    {data: 'nama', name: 'nama' , width: '5%', class: 'text-left' },
+                    {data: 'alamat', name: 'alamat' , width: '20%', class: 'text-justify' },
                     {data: 'nilai_akre', name: 'nilai_akre' , width: '5%', class: 'text-center' },
                     {data: 'tahun_akre', name: 'tahun_akre' , width: '5%', class: 'text-center' },
                     {data: 'noizin', name: 'noizin' , width: '10%', class: 'text-center' },
-                    {data: 'kawasan', name: 'kawasan' , width: '5%', class: 'text-center' },
-                    {data: 'inap', name: 'inap' , width: '5%', class: 'text-center' },
-                    {data: 'poned', name: 'poned' , width: '5%', class: 'text-center' },
-                    {data: 'blud', name: 'blud' , width: '5%', class: 'text-center' },             
+                    {data: 'kapus', name: 'kapus' , width: '10%', class: 'text-left' },
+                    {data: 'pjmutu', name: 'pjmutu' , width: '10%', class: 'text-left' },
                     {
                         data: 'aksi',
-                        width: '15%',
+                        width: '5%',
                         class: 'text-center',
                         searchable: false,
                         sortable: false
@@ -123,16 +113,12 @@ Kriteria Kawasan Berdasarkan SK
             $.get(url)
                 .done((response) => {
                     $('#modal-form [name=nama]').val(response.nama);
-                    $('#modal-form [name=kode_fasyankes]').val(response.kode_fasyankes);
                     $('#modal-form [name=alamat]').val(response.alamat);
-                    $('#modal-form [name=email]').val(response.email);
                     $('#modal-form [name=nilai_akre]').val(response.nilai_akre);              
                     $('#modal-form [name=tahun_akre]').val(response.tahun_akre);
                     $('#modal-form [name=noizin]').val(response.noizin);
-                    $('#modal-form [name=kawasan]').val(response.kawasan);
-                    $('#modal-form [name=inap]').val(response.inap);
-                    $('#modal-form [name=poned]').val(response.poned);              
-                    $('#modal-form [name=blud]').val(response.blud);
+                    $('#modal-form [name=kapus]').val(response.kapus);
+                    $('#modal-form [name=pjmutu]').val(response.pjmutu);
                 })
                 .fail((errors) => {
                     alert('Tidak dapat menampilkan data');

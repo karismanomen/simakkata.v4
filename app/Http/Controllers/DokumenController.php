@@ -2,30 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Klinik;
-
+use App\Models\Dokumen;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 
-class KlinikController extends Controller
+class DokumenController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('klinik.index');
+        return view('dokumen.index');
     }
 
     public function data()
     {
-        $klinik = Klinik::orderBy('nama_klinik', 'asc')->get();
+        $dokumen = Dokumen::orderBy('id_dokumen', 'asc')->get();
 
         return datatables()
-            ->of($klinik)
+            ->of($dokumen)
             ->addIndexColumn()
-            ->addColumn('aksi', function ($klinik) {
+            ->addColumn('aksi', function ($dokumen) {
                 return '
                 <div class="btn-group">
-                    <button type="button" onclick="editForm(`'. route('klinik.update', $klinik->id_klinik) .'`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
-                    <button type="button" onclick="deleteData(`'. route('klinik.destroy', $klinik->id_klinik) .'`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
+                    <button onclick="editForm(`'. route('dokumen.update', $dokumen->id_dokumen) .'`)" class="btn btn-xs btn-info btn-flat"><i class="fa fa-pencil"></i></button>
+                    <button onclick="deleteData(`'. route('dokumen.destroy', $dokumen->id_dokumen) .'`)" class="btn btn-xs btn-danger btn-flat"><i class="fa fa-trash"></i></button>
                 </div>
                 ';
             })
@@ -51,7 +54,9 @@ class KlinikController extends Controller
      */
     public function store(Request $request)
     {
-        $klinik = Klinik::create($request->all());
+        $dokumen = new Dokumen();
+        $dokumen->nama_dokumen = $request->nama_dokumen;
+        $dokumen->save();
 
         return response()->json('Data berhasil disimpan', 200);
     }
@@ -64,9 +69,9 @@ class KlinikController extends Controller
      */
     public function show($id)
     {
-        $klinik = Klinik::find($id);
+        $dokumen = Dokumen::find($id);
 
-        return response()->json($klinik);
+        return response()->json($dokumen);
     }
 
     /**
@@ -89,7 +94,9 @@ class KlinikController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $klinik = Klinik::find($id)->update($request->all());
+        $dokumen = Dokumen::find($id);
+        $dokumen->nama_dokumen = $request->nama_dokumen;
+        $dokumen->update();
 
         return response()->json('Data berhasil disimpan', 200);
     }
@@ -102,9 +109,14 @@ class KlinikController extends Controller
      */
     public function destroy($id)
     {
-        $klinik = Klinik::find($id)->delete();
+        $dokumen = Dokumen::find($id);
+        $dokumen->delete();
 
         return response(null, 204);
     }
-    
+
+    public function download($id){
+        $path = Dokumen::where("id", $id)->value("nama_dokumen");
+        return Storage::download($path);
+    }
 }

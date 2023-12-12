@@ -44,7 +44,7 @@
                             Akreditasi</label>
                         <div class="col-lg-6">
                             <Select class="form-control" name="jabatan_akre" id="jabatan_akre">
-                                <option value="Tim Pembina Cluster Binaan"> Tim Pembina Cluster Binaan</option>
+                                <option value="Tim Pembina Cluster Binaan">TPCB</option>
                             </Select>
                         </div>
                     </div>
@@ -79,20 +79,6 @@
                                 <option value="Pembina Utama/IVe">Pembina Utama/IVe</option>
                                 <option value=" - "> - </option>
                             </Select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="telepon" class="col-lg-2 col-lg-offset-1 control-label">Telepon</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="telepon" id="telepon" class="form-control" required>
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="email" class="col-lg-2 col-lg-offset-1 control-label">Email</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="email" id="email" class="form-control" required>
-                            <span class="help-block with-errors"></span>
                         </div>
                     </div>
                 </div>
